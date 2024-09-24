@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  # Define the PostgreSQL service
+  postgres:
+    # Use the latest version of the official PostgreSQL image
+    image: postgres:latest
+    # Name the container "ecommerce_db" for easier management
+    container_name: ecommerce_demo_db
+    # Set environment variables to configure the PostgreSQL instance
+    environment:
+      POSTGRES_USER: admin     # The username to connect to the database
+      POSTGRES_PASSWORD: admin # The password for the user
+      POSTGRES_DB: ecommerce_demo   # The default database to create
+    # Mount the init_base.sql file into the container so that it runs when the database starts
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init_base.sql
+    # Map the container's internal port 5432 to the host's port 5432 for access
+    ports:
+      - "5432:5432"
