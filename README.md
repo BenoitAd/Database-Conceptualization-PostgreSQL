@@ -13,8 +13,9 @@ The goal of this project is to demonstrate the following skills:
 ## Project Structure
 The project is structured as follows:
 
-- **ecommerce_db_schema.sql**: This script initializes the database by creating tables, defining relationships, and adding constraints like primary and foreign keys.
-- **ecommerce_uml_diagram.png**: A visual representation of the database schema using an UML diagram to depict the relationships and cardinalities between the tables.
+- **init_base.sql**: This script initializes the database by creating tables, defining relationships, and adding constraints like primary and foreign keys.
+- **ressources/ecommerce_uml_diagram.png**: A visual representation of the database schema using an UML diagram to depict the relationships and cardinalities between the tables.
+- **Dockerfile & docker-compose.yml**: These files are used to create a Docker image of the fully initialized and ready-to-use database.
 
 ## Database Tables
 The database includes the following tables:
