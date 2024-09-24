@@ -70,6 +70,7 @@ Connection Details:
   - User: admin
   - Password: admin
   - Database: ecommerce_demo
+  
 You can modify these connection details by editing the docker-compose.yml file to suit your preferences.
 
 ## Next Steps
